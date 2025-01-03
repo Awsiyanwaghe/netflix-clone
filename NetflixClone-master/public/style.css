@@ -1,0 +1,451 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --hover: rgb(199, 1, 1);
+    --gray: rgb(66, 66, 66);
+}
+
+body {
+    font-family: sans-serif;
+    color: white;
+    background-color: black;
+   
+}
+body,html{
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.home {
+    height: 100vh;
+    background: url(img/netflix.png)no-repeat center center/cover;
+    box-shadow: inset 0px 0px 500px 400px rgba(0, 0, 0, 0.694);
+    border-bottom: 10px solid var(--gray);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.25rem 7.5rem; /* 20px 120px converted to rem */
+    align-items: center;
+}
+
+nav img {
+    width: 15.625rem; /* 250px converted to rem */
+    filter: contrast(2);
+}
+
+.navMenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navMenu button {
+    margin-left: 1.25rem; /* 20px converted to rem */
+    font-weight: 600;
+    padding: 0.4375rem 0.625rem; 
+    font-size: 1rem; /* 16px converted to rem */
+    background-color: red;
+    border: none;
+    border-radius: 0.1875rem; /* 3px converted to rem */
+    color: white;
+}
+
+.navMenu button:hover {
+    background-color: var(--hover);
+}
+
+.navMenu select {
+    padding: 0.375rem 0rem;
+    width: 7.5rem; 
+    background-color: transparent;
+    color: white;
+    font-size: 1.125rem; /* 18px converted to rem */
+    border-radius: 0.1875rem; /* 3px converted to rem */
+    outline: white;
+    position: relative;
+}
+
+.navMenu option {
+    color: black;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25vh;
+    line-height: 30px;
+}
+
+.content h1 {
+    font-size: 2.8125rem; /* 45px converted to rem */
+    font-weight: 900;
+    white-space: pre-wrap;
+    text-align: center;
+}
+
+.content p {
+    font-size: 1.25rem; /* 20px converted to rem */
+    margin-top: 1.25rem; /* 20px converted to rem */
+}
+
+.cntForm {
+    margin-top: 1.875rem; /* 30px converted to rem */
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+}
+
+.cntForm a {
+    padding: 1rem; /* 16px converted to rem */
+    width: 12.5rem; /* 200px converted to rem */
+    font-size: 1.25rem; /* 20px converted to rem */
+    font-weight: 700;
+    background-color: red;
+    color: white;
+    border-radius: 0.3125rem; /* 5px converted to rem */
+    border: none;
+    text-align: center;
+    text-decoration: none;
+}
+
+.cntForm button:hover {
+    background-color: var(--hover);
+}
+
+/* //tv section */
+
+.tv {
+    display: flex;
+    justify-content: space-around;
+    padding: 100px;
+    
+}
+
+.tvCon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10%;
+}
+
+.tvCon p {
+    white-space: pre-wrap;
+    font-size: 1.25rem; /* 20px converted to rem */
+    margin-top: 1.25rem; /* 20px converted to rem */
+}
+
+.tvCon h1 {
+    font-size: 2.8125rem; /* 45px converted to rem */
+    font-weight: 900;
+    margin-left: 3.125rem; /* 50px converted to rem */
+}
+
+.tvCon img {
+    width: 28.125rem; /* 450px converted to rem */
+    animation: tv alternate-reverse 10s infinite;
+}
+
+@keyframes tv {
+    0% {
+        background: url(./img/n1.png) no-repeat center center/cover;
+    }
+    25% {
+        background: url(./img/n2.png) no-repeat center center/cover;
+    }
+    50% {
+        background: url(./img/n3.png) no-repeat center center/cover;
+    }
+    75% {
+        background: url(./img/n4.png) no-repeat center center/cover;
+    }
+    100% {
+        background: url(./img/n5.png) no-repeat center center/cover;
+    }
+}
+
+/* ... (rest of your CSS, unchanged) ... */
+
+
+
+/* downlaod section */
+.download{
+    display: flex;
+    padding: 60px;
+    justify-content: space-around;
+    border-top: 10px solid var(--gray);
+}
+
+.down{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.down h1{
+    font-size: 45px;
+    font-weight: 900;
+    white-space: pre-wrap;
+
+}
+.down p{
+    font-size: 20px;
+    white-space: pre-wrap;
+    margin-top: 20px;
+}
+
+.down img{
+    width: 500px;
+}
+
+.watching{
+    display: flex;
+    padding: 60px;
+    justify-content: space-around;
+    border-top: 10px solid var(--gray);
+}
+.watch{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.watch p{
+    font-size: 20px;
+    white-space: pre-wrap;
+    margin-top: 20px;
+}
+.watch h1{
+    font-size: 45px;
+    font-weight: 900;
+    margin-left: 60px;
+}
+.watch img{
+    width: 450px;
+    background: url(img/video.mp4);
+    position: relative;
+}
+.watch video{
+    z-index: -1;
+    width: 280px;
+    position: absolute;
+    top: 40px;
+}
+
+.kids{
+    display: flex;
+    padding: 60px;
+    justify-content: space-around;
+    border-top: 10px solid var(--gray);
+
+}
+.kid{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+}
+.kid p{
+    font-size: 20px;
+    white-space: pre-wrap;
+    margin-top: 20px;
+}
+.kid h1{
+    font-size: 45px;
+    font-weight: 900;
+    margin-left: 60px;
+    white-space: pre-wrap;
+}
+.kid img{
+    width: 500px;
+}
+
+
+/* question part */
+.questions{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 60px;
+    justify-content: space-around;
+    border-top: 10px solid var(--gray);
+}
+.questions h1{
+    font-size: 45px;
+    font-weight: 900;
+}
+.detail{
+    margin-top: 40px;
+}
+
+.detail summary{
+    font-size: 25px;
+    background-color: rgb(50, 50, 50);
+    width: 800px;
+    padding: 25px;
+    margin-top: 5px;
+}
+.detail summary:hover{
+    background-color: rgb(88, 88, 88);
+}
+.detail p{
+    font-size: 20px;
+    margin-top: 2px;
+    padding: 25px;
+    white-space: pre-wrap;
+    width:800px ;
+    background-color:rgb(50, 50, 50) ;
+
+}
+
+
+
+
+
+
+
+/* contact section */
+.contacts{
+    display: flex;
+    padding: 80px;
+    justify-content: space-around;
+    border-top: 10px solid var(--gray);
+}
+.contacts{
+    position: relative;
+}
+.contacts p{
+    position: absolute;
+    width: fit-content;
+    top: 50px;
+    left: 150px;
+    color: gray;
+    cursor: pointer;
+}
+.contact li{
+    list-style: none;
+    cursor: pointer;
+    color: gray;
+    margin-top: 10px;
+}
+.contact select{
+    padding: 6px 0px;
+    width: 120px;
+    background-color: transparent;
+    color: white;
+    font-size: 16px;
+    border-radius: 3px;
+    outline: white;
+    position: relative;
+    margin-top: 10px;
+}
+.contact option{
+    color: black;
+}
+
+@media (max-width:857px){
+
+    nav{
+        justify-content: center;     
+    }
+    nav img{
+        width: 200px;
+
+    }
+    nav a{
+        margin-right: 5%;
+    }
+    .navMenu button{
+        width: 80px;
+    }
+
+    .content{
+        margin-top: 5vh;
+    }
+    
+    .cntForm a{
+        margin-top: 0px;
+    }
+
+    .content h1{
+        font-size: 40px;
+    }
+    .content h1,p{
+        line-height: 45px;
+    }
+    
+
+    .tv{
+        flex-direction: column;
+        margin-top:30%;
+    }
+    
+    .tvCon h1{
+        font-size: 35px;
+    }
+    .tvCon{
+        text-align: center;        
+        white-space: nowrap;
+    }
+
+    .download {
+        flex-direction: column;
+        padding: 20px;
+    }
+    .down{
+        text-align: center;
+    }
+
+    .watching{
+        flex-direction: column;
+        padding: 20px;
+    }
+    .watch{
+        text-align: center;
+    }
+    /* .watch img{
+        width: 450px;
+        overflow: hidden;
+    }
+    .watch video{
+        width: 280px;
+        right: 50px;
+    } */
+
+
+    .kids{
+        flex-direction: column;
+        text-align: center;
+    }
+    
+
+    .detail summary{
+        width:300px;
+    }
+    .detail p{
+        width: 300px;
+    }
+    
+    .contacts p{
+        left: 50px;
+        
+    }
+    .contact{
+        margin: 10px;
+    }
+}
